@@ -484,7 +484,7 @@ class ConsulUtil:
             for member in members_data:
                 if member['Name'] == node:
                     return int(member['Status']) == 1
-            return True
+            return False
         except (ConsulException, HTTPError, RequestException) as e:
             raise HAConsistencyException(
                 'Failed to members data from Consul') from e
