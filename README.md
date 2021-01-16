@@ -189,6 +189,12 @@ You will probably need to modify `host`, `data_iface`, and `io_disks` values.
   dd if=/dev/urandom of=/tmp/128M bs=1M count=128
   sudo m0crate -S /tmp/m0crate-io.yaml
   ```
+  Please note that m0crate will run as shown above when it will be
+  available in default system PATH which will be the case when
+  setup is created using RPMs. If its created by building Motr
+  source code, then m0crate utility can be run using full path from
+  the motr source directory (say MOTR_SRC).
+  ./MOTR_SRC/motr/m0crate/m0crate
 
 * Stop the cluster.
   ```sh
